@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Music Talents</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'orange-brand': '#FF6B00',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-black min-h-screen">
+    <!-- Header -->
+    <header class="fixed top-0 w-full bg-black z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-orange-brand font-bold text-xl">Orange</span>
+                <div class="ml-2">
+                    <div class="text-white font-bold text-sm">Music</div>
+                    <div class="text-white font-bold text-sm">Talents</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-8">
+                <a href="#" class="text-white hover:text-orange-brand">Nos coachs</a>
+                <a href="#" class="text-white hover:text-orange-brand">Nos Candidats</a>
+                <a href="#" class="text-white hover:text-orange-brand">Nos Artistes</a>
+                <a href="#" class="text-white hover:text-orange-brand">Best of</a>
+                <a href="#" class="text-white hover:text-orange-brand">Nos partenaires</a>
+                <button class="bg-orange-brand text-white px-6 py-2 rounded-full hover:bg-orange-600">Vote</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-[#FF6B00] min-h-screen pt-20">
+        <div class="container mx-auto px-4 py-16">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="w-full md:w-1/2 flex flex-col justify-center mb-8 md:mb-0">
+                    <h1 class="text-white text-7xl font-bold mb-6 leading-tight">Orange<br>Music<br>Talents</h1>
+                    <p class="text-white text-xl mb-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>
+                    <button class="bg-white text-black px-8 py-3 rounded-full w-max text-lg font-medium hover:bg-gray-100">Lorem ipsum</button>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="bg-white p-2 aspect-square">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z'/%3E%3C/svg%3E" alt="Music icon" class="w-full">
+                        </div>
+                        <div class="bg-white p-2 aspect-square">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3c-4.97 0-9 4.03-9 9v7c0 1.1.9 2 2 2h4v-8H5v-1c0-3.87 3.13-7 7-7s7 3.13 7 7v1h-4v8h4c1.1 0 2-.9 2-2v-7c0-4.97-4.03-9-9-9z'/%3E%3C/svg%3E" alt="Headphones icon" class="w-full">
+                        </div>
+                        <div class="bg-white p-2 aspect-square">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M15 6H3v2h12V6zm0 4H3v2h12v-2zM3 16h8v-2H3v2zM17 6v8.18c-.31-.11-.65-.18-1-.18-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3V8h3V6h-5z'/%3E%3C/svg%3E" alt="Music list icon" class="w-full">
+                        </div>
+                        <div class="bg-white p-2 aspect-square">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z'/%3E%3C/svg%3E" alt="Music note icon" class="w-full">
+                        </div>
+                        <div class="bg-white p-2 aspect-square">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3v10.55c-.59-.34-1.27-.55-2-.55-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4V7h4V3h-6z'/%3E%3C/svg%3E" alt="Music icon" class="w-full">
+                        </div>
+                        <div class="bg-white p-2 aspect-square">
+                            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3c-4.97 0-9 4.03-9 9v7c0 1.1.9 2 2 2h4v-8H5v-1c0-3.87 3.13-7 7-7s7 3.13 7 7v1h-4v8h4c1.1 0 2-.9 2-2v-7c0-4.97-4.03-9-9-9z'/%3E%3C/svg%3E" alt="Headphones icon" class="w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coaches Section -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-orange-brand text-2xl font-bold mb-8">Nos coachs</h2>
+            <div class="relative">
+                <div class="flex">
+                    <div class="w-1/2">
+                        <h3 class="text-white text-4xl font-bold mb-4">Jean Goubald Kalala</h3>
+                        <p class="text-white mb-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
+                        <button class="bg-orange-brand text-white px-6 py-2 rounded-full hover:bg-orange-600">Lire la suite</button>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-8 space-x-2">
+                    <div class="w-2 h-2 rounded-full bg-orange-brand"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                    <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artists Section -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-orange-brand text-2xl font-bold mb-8">Nos Artistes</h2>
+            <div class="grid grid-cols-4 gap-8">
+                <div class="space-y-4">
+                    <img src="https://via.placeholder.com/300x400" alt="Artist" class="w-full h-64 object-cover">
+                    <h3 class="text-orange-brand text-xl">Lorem Ipsum</h3>
+                    <p class="text-white">Diam nonummy</p>
+                </div>
+                <!-- Repeat for other artists -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Candidates Section -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-orange-brand text-4xl font-bold mb-8">Ils ont tenté<br>leurs chances</h2>
+            <div class="relative">
+                <!-- Candidate cards -->
+                <div class="bg-orange-brand p-8 rounded-lg max-w-md">
+                    <h3 class="text-white text-2xl font-bold mb-4">Lorem ipsum dolor sit amet</h3>
+                    <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Best Of Section -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-orange-brand text-2xl font-bold mb-8">Best of</h2>
+            <div class="bg-gray-900 aspect-video relative">
+                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div class="w-16 h-16 bg-orange-brand rounded-full flex items-center justify-center">
+                        <i class="fas fa-play text-white text-2xl"></i>
+                    </div>
+                </button>
+            </div>
+            <p class="text-white mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-16 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-orange-brand text-2xl font-bold mb-8">Nos partenaires</h2>
+            <div class="flex justify-center space-x-16">
+                <img src="https://via.placeholder.com/150x50" alt="Spotify" class="h-12">
+                <img src="https://via.placeholder.com/150x50" alt="Bomaye" class="h-12">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center space-x-8 text-white text-sm">
+                <a href="#" class="hover:text-orange-brand">musictalents.orange.cd</a>
+                <a href="#" class="hover:text-orange-brand">CGU</a>
+                <a href="#" class="hover:text-orange-brand">Règlement du jeu</a>
+                <a href="#" class="hover:text-orange-brand">Contactez-nous</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
