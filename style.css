@@ -1,0 +1,73 @@
+/* Base styles */
+:root {
+    --orange-brand: #FF6B00;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+}
+
+/* Navigation */
+.nav-link {
+    transition: color 0.3s ease;
+}
+
+/* Hero section */
+.hero-section {
+    background-color: var(--orange-brand);
+}
+
+/* Custom button styles */
+.btn-orange {
+    background-color: var(--orange-brand);
+    transition: all 0.3s ease;
+}
+
+.btn-orange:hover {
+    background-color: #ff7b1a;
+}
+
+/* Carousel dots */
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #4B5563;
+}
+
+.dot.active {
+    background-color: var(--orange-brand);
+}
+
+/* Artist cards */
+.artist-card img {
+    width: 100%;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+/* Play button */
+.play-button {
+    width: 64px;
+    height: 64px;
+    background-color: var(--orange-brand);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+}
+
+/* Footer */
+.footer-link:hover {
+    color: var(--orange-brand);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+}
