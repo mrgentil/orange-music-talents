@@ -82,14 +82,55 @@
         <div class="container mx-auto px-4">
             <h2 class="text-orange-brand text-2xl font-bold mb-8">Nos coachs</h2>
             <div class="relative">
-                <div class="flex">
-                    <div class="w-1/2">
-                        <h3 class="text-white text-4xl font-bold mb-4">Jean Goubald Kalala</h3>
-                        <p class="text-white mb-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
-                        <button class="bg-orange-brand text-white px-6 py-2 rounded-full hover:bg-orange-600">Lire la suite</button>
+                <div id="coach-carousel" class="flex transition-transform duration-500" style="transform: translateX(0%)">
+                    <!-- Slide 1: Jean Goubald Kalala -->
+                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px]">
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-4 md:px-8">
+                            <h3 class="text-white text-4xl md:text-5xl font-bold mb-4">Jean Goubald<br>Kalala</h3>
+                            <p class="text-white mb-8 text-base md:text-lg">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
+                            <button class="bg-orange-brand text-white px-6 py-2 rounded-full hover:bg-orange-600 text-lg font-semibold">Lire la suite</button>
+                        </div>
+                        <div class="md:w-1/2 w-full flex justify-center items-center relative mt-8 md:mt-0">
+                            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=600&h=400&fit=crop" alt="Jean Goubald Kalala" class="relative z-10 w-full h-80 object-contain">
+                        </div>
+                    </div>
+                    <!-- Slide 2: Coach 2 -->
+                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px]">
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-4 md:px-8">
+                            <h3 class="text-white text-4xl md:text-5xl font-bold mb-4">Coach 2</h3>
+                            <p class="text-white mb-8 text-base md:text-lg">Description du coach 2. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <button class="bg-orange-brand text-white px-6 py-2 rounded-full hover:bg-orange-600 text-lg font-semibold">Lire la suite</button>
+                        </div>
+                        <div class="md:w-1/2 w-full flex justify-center items-center relative mt-8 md:mt-0">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Coach 2" class="relative z-10 w-full h-80 object-contain">
+                        </div>
+                    </div>
+                    <!-- Slide 3: Coach 3 -->
+                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px]">
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-4 md:px-8">
+                            <h3 class="text-white text-4xl md:text-5xl font-bold mb-4">Coach 3</h3>
+                            <p class="text-white mb-8 text-base md:text-lg">Description du coach 3. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <button class="bg-orange-brand text-white px-6 py-2 rounded-full hover:bg-orange-600 text-lg font-semibold">Lire la suite</button>
+                        </div>
+                        <div class="md:w-1/2 w-full flex justify-center items-center relative mt-8 md:mt-0">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Coach 3" class="relative z-10 w-full h-80 object-contain">
+                        </div>
+                    </div>
+                    <!-- Slide 4: Coach 4 -->
+                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px]">
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-4 md:px-8">
+                            <h3 class="text-white text-4xl md:text-5xl font-bold mb-4">Coach 4</h3>
+                            <p class="text-white mb-8 text-base md:text-lg">Description du coach 4. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+                            <button class="bg-orange-brand text-white px-6 py-2 rounded-full hover:bg-orange-600 text-lg font-semibold">Lire la suite</button>
+                        </div>
+                        <div class="md:w-1/2 w-full flex justify-center items-center relative mt-8 md:mt-0">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Coach 4" class="relative z-10 w-full h-80 object-contain">
+                        </div>
                     </div>
                 </div>
-                <div class="flex justify-center mt-8 space-x-2">
+                <button id="coach-prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-orange-brand text-white w-10 h-10 rounded-full flex items-center justify-center z-10"><i class="fas fa-chevron-left"></i></button>
+                <button id="coach-next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-orange-brand text-white w-10 h-10 rounded-full flex items-center justify-center z-10"><i class="fas fa-chevron-right"></i></button>
+                <div class="flex justify-center mt-8 space-x-2" id="coach-dots">
                     <div class="w-2 h-2 rounded-full bg-orange-brand"></div>
                     <div class="w-2 h-2 rounded-full bg-gray-600"></div>
                     <div class="w-2 h-2 rounded-full bg-gray-600"></div>
@@ -102,27 +143,115 @@
     <!-- Artists Section -->
     <section class="py-16 bg-black">
         <div class="container mx-auto px-4">
-            <h2 class="text-orange-brand text-2xl font-bold mb-8">Nos Artistes</h2>
-            <div class="grid grid-cols-4 gap-8">
-                <div class="space-y-4">
-                    <img src="https://via.placeholder.com/300x400" alt="Artist" class="w-full h-64 object-cover">
-                    <h3 class="text-orange-brand text-xl">Lorem Ipsum</h3>
-                    <p class="text-white">Diam nonummy</p>
+            <div class="rounded-2xl border-4 border-orange-brand p-8" style="border-color: #FF6B00;">
+                <h2 class="text-orange-brand text-3xl font-bold mb-8">Nos Artistes</h2>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center">
+                        <img src="https://randomuser.me/api/portraits/men/11.jpg" alt="Artiste 1" class="w-48 h-48 object-cover mb-4">
+                        <h3 class="text-orange-brand text-xl">Artiste 1</h3>
+                        <p class="text-white">Chant</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Artiste 2" class="w-48 h-48 object-cover mb-4">
+                        <h3 class="text-orange-brand text-xl">Artiste 2</h3>
+                        <p class="text-white">Chant</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://randomuser.me/api/portraits/women/13.jpg" alt="Artiste 3" class="w-48 h-48 object-cover mb-4">
+                        <h3 class="text-orange-brand text-xl">Artiste 3</h3>
+                        <p class="text-white">Chant</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://randomuser.me/api/portraits/women/14.jpg" alt="Artiste 4" class="w-48 h-48 object-cover mb-4">
+                        <h3 class="text-orange-brand text-xl">Artiste 4</h3>
+                        <p class="text-white">Chant</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://randomuser.me/api/portraits/men/15.jpg" alt="Artiste 5" class="w-48 h-48 object-cover mb-4">
+                        <h3 class="text-orange-brand text-xl">Artiste 5</h3>
+                        <p class="text-white">Chant</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://randomuser.me/api/portraits/women/16.jpg" alt="Artiste 6" class="w-48 h-48 object-cover mb-4">
+                        <h3 class="text-orange-brand text-xl">Artiste 6</h3>
+                        <p class="text-white">Chant</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="Artiste 7" class="w-48 h-48 object-cover mb-4">
+                        <h3 class="text-orange-brand text-xl">Artiste 7</h3>
+                        <p class="text-white">Chant</p>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="https://randomuser.me/api/portraits/women/18.jpg" alt="Artiste 8" class="w-48 h-48 object-cover mb-4">
+                        <h3 class="text-orange-brand text-xl">Artiste 8</h3>
+                        <p class="text-white">Chant</p>
+                    </div>
                 </div>
-                <!-- Repeat for other artists -->
             </div>
         </div>
     </section>
 
     <!-- Candidates Section -->
-    <section class="py-16 bg-black">
-        <div class="container mx-auto px-4">
-            <h2 class="text-orange-brand text-4xl font-bold mb-8">Ils ont tenté<br>leurs chances</h2>
-            <div class="relative">
-                <!-- Candidate cards -->
-                <div class="bg-orange-brand p-8 rounded-lg max-w-md">
-                    <h3 class="text-white text-2xl font-bold mb-4">Lorem ipsum dolor sit amet</h3>
-                    <p class="text-white mb-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna...</p>
+    <section class="py-16 bg-[#FF6B00] relative overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <!-- Texte à gauche -->
+            <div class="md:w-1/2 w-full mb-8 md:mb-0">
+                <h2 class="text-black text-5xl font-bold mb-6 leading-tight">Ils ont tenté<br>leurs chances</h2>
+                <p class="text-white text-lg mb-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
+            </div>
+            <!-- Carrousel à droite -->
+            <div class="md:w-1/2 w-full flex flex-col items-center relative">
+                <div class="relative w-full flex items-center justify-center">
+                    <button id="candidat-prev" class="absolute left-0 top-1/2 -translate-y-1/2 bg-white text-[#FF6B00] w-10 h-10 rounded-full flex items-center justify-center z-10 shadow"><i class="fas fa-chevron-left"></i></button>
+                    <div id="candidat-carousel" class="flex transition-transform duration-500" style="transform: translateX(0%)">
+                        <!-- Slide 1 -->
+                        <div class="w-64 h-80 bg-white rounded-2xl shadow-lg mr-[-48px] z-30 flex flex-col justify-end overflow-hidden border-4 border-white" style="background:#d8d8d8;">
+                            <div class="bg-white p-4">
+                                <div class="flex items-end">
+                                    <span class="text-[#FF6B00] font-bold text-lg mr-2">Candidat</span>
+                                    <span class="bg-[#FF6B00] text-white font-bold px-2 py-1 rounded text-sm">01</span>
+                                </div>
+                                <div class="text-black font-bold text-xl leading-tight">lorem ipsum</div>
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="w-64 h-80 bg-[#f7e017] rounded-2xl shadow-lg mr-[-48px] z-20 flex flex-col justify-end overflow-hidden border-4 border-white">
+                            <div class="bg-white p-4">
+                                <div class="flex items-end">
+                                    <span class="text-[#FF6B00] font-bold text-lg mr-2">Candidat</span>
+                                    <span class="bg-[#FF6B00] text-white font-bold px-2 py-1 rounded text-sm">02</span>
+                                </div>
+                                <div class="text-black font-bold text-xl leading-tight">lorem ipsum</div>
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="w-64 h-80 bg-[#a97cf7] rounded-2xl shadow-lg mr-[-48px] z-10 flex flex-col justify-end overflow-hidden border-4 border-white">
+                            <div class="bg-white p-4">
+                                <div class="flex items-end">
+                                    <span class="text-[#FF6B00] font-bold text-lg mr-2">Candidat</span>
+                                    <span class="bg-[#FF6B00] text-white font-bold px-2 py-1 rounded text-sm">03</span>
+                                </div>
+                                <div class="text-black font-bold text-xl leading-tight">lorem ipsum</div>
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="w-64 h-80 bg-[#ffb6c1] rounded-2xl shadow-lg flex flex-col justify-end overflow-hidden border-4 border-white">
+                            <div class="bg-white p-4">
+                                <div class="flex items-end">
+                                    <span class="text-[#FF6B00] font-bold text-lg mr-2">Candidat</span>
+                                    <span class="bg-[#FF6B00] text-white font-bold px-2 py-1 rounded text-sm">04</span>
+                                </div>
+                                <div class="text-black font-bold text-xl leading-tight">lorem ipsum</div>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="candidat-next" class="absolute right-0 top-1/2 -translate-y-1/2 bg-white text-[#FF6B00] w-10 h-10 rounded-full flex items-center justify-center z-10 shadow"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="flex justify-center mt-8 space-x-2" id="candidat-dots">
+                    <div class="w-2 h-2 rounded-full bg-white border border-[#FF6B00]"></div>
+                    <div class="w-2 h-2 rounded-full bg-[#FF6B00]"></div>
+                    <div class="w-2 h-2 rounded-full bg-white border border-[#FF6B00]"></div>
+                    <div class="w-2 h-2 rounded-full bg-white border border-[#FF6B00]"></div>
                 </div>
             </div>
         </div>
@@ -130,26 +259,32 @@
 
     <!-- Best Of Section -->
     <section class="py-16 bg-black">
-        <div class="container mx-auto px-4">
-            <h2 class="text-orange-brand text-2xl font-bold mb-8">Best of</h2>
-            <div class="bg-gray-900 aspect-video relative">
-                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <div class="w-16 h-16 bg-orange-brand rounded-full flex items-center justify-center">
-                        <i class="fas fa-play text-white text-2xl"></i>
-                    </div>
-                </button>
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center md:items-start gap-12">
+            <!-- Vidéo à gauche -->
+            <div class="md:w-1/2 w-full flex justify-center items-center">
+                <div class="relative w-full max-w-lg aspect-video border-2 border-orange-brand rounded-lg overflow-hidden flex items-center justify-center bg-gray-700">
+                    <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                        <div class="w-16 h-16 bg-orange-brand rounded-full flex items-center justify-center shadow-lg">
+                            <i class="fas fa-play text-white text-2xl"></i>
+                        </div>
+                    </button>
+                </div>
             </div>
-            <p class="text-white mt-4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
+            <!-- Texte à droite -->
+            <div class="md:w-1/2 w-full flex flex-col justify-center">
+                <h2 class="text-orange-brand text-4xl font-bold mb-4">Best of</h2>
+                <p class="text-white text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation...</p>
+            </div>
         </div>
     </section>
 
     <!-- Partners Section -->
     <section class="py-16 bg-black">
         <div class="container mx-auto px-4">
-            <h2 class="text-orange-brand text-2xl font-bold mb-8">Nos partenaires</h2>
-            <div class="flex justify-center space-x-16">
-                <img src="https://via.placeholder.com/150x50" alt="Spotify" class="h-12">
-                <img src="https://via.placeholder.com/150x50" alt="Bomaye" class="h-12">
+            <h2 class="text-orange-brand text-3xl font-bold mb-8 text-left">Nos partenaires</h2>
+            <div class="flex flex-row justify-center items-center space-x-24">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" class="h-20 w-auto">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Bomaye_Musik_logo.png" alt="Bomaye" class="h-24 w-auto">
             </div>
         </div>
     </section>
@@ -165,5 +300,71 @@
             </div>
         </div>
     </footer>
+    <script>
+    // Carrousel Coachs
+    const carousel = document.getElementById('coach-carousel');
+    const prevBtn = document.getElementById('coach-prev');
+    const nextBtn = document.getElementById('coach-next');
+    const dots = document.getElementById('coach-dots').children;
+    const totalSlides = carousel.children.length;
+    let currentSlide = 0;
+
+    function updateCarousel() {
+        carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+        for (let i = 0; i < dots.length; i++) {
+            dots[i].classList.remove('bg-orange-brand');
+            dots[i].classList.add('bg-gray-600');
+        }
+        dots[currentSlide].classList.add('bg-orange-brand');
+        dots[currentSlide].classList.remove('bg-gray-600');
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+    });
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateCarousel();
+    });
+    for (let i = 0; i < dots.length; i++) {
+        dots[i].addEventListener('click', () => {
+            currentSlide = i;
+            updateCarousel();
+        });
+    }
+    // Carrousel Candidats
+    const candidatCarousel = document.getElementById('candidat-carousel');
+    const candidatPrevBtn = document.getElementById('candidat-prev');
+    const candidatNextBtn = document.getElementById('candidat-next');
+    const candidatDots = document.getElementById('candidat-dots').children;
+    const candidatTotal = candidatCarousel.children.length;
+    let candidatCurrent = 0;
+
+    function updateCandidatCarousel() {
+        candidatCarousel.style.transform = `translateX(-${candidatCurrent * 112}px)`;
+        for (let i = 0; i < candidatDots.length; i++) {
+            candidatDots[i].classList.remove('bg-[#FF6B00]');
+            candidatDots[i].classList.add('bg-white');
+        }
+        candidatDots[candidatCurrent].classList.add('bg-[#FF6B00]');
+        candidatDots[candidatCurrent].classList.remove('bg-white');
+    }
+
+    candidatPrevBtn.addEventListener('click', () => {
+        candidatCurrent = (candidatCurrent - 1 + candidatTotal) % candidatTotal;
+        updateCandidatCarousel();
+    });
+    candidatNextBtn.addEventListener('click', () => {
+        candidatCurrent = (candidatCurrent + 1) % candidatTotal;
+        updateCandidatCarousel();
+    });
+    for (let i = 0; i < candidatDots.length; i++) {
+        candidatDots[i].addEventListener('click', () => {
+            candidatCurrent = i;
+            updateCandidatCarousel();
+        });
+    }
+    </script>
 </body>
 </html>
