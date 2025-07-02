@@ -48,18 +48,18 @@
 
     <!-- Hero Section (bannière) -->
     <section class="bg-[#FF6B00] min-h-screen flex items-center py-8 md:py-0">
-        <div class="container mx-auto px-4 flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-0">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
             <!-- Image bannière à gauche -->
             <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-8 md:mt-0">
                 <img src="images/banniere.png" alt="Bannière Orange Music Talents" class="w-full max-w-xs sm:max-w-md md:max-w-lg h-auto rounded-xl shadow-lg">
             </div>
             <!-- Texte à droite -->
             <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-                <h1 class="text-black font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-4">
+                <h1 class="text-black font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-4 break-words">
                     Orange <br>
                     <span class="text-white">Music<br>Talents</span>
                 </h1>
-                <p class="text-black text-lg sm:text-xl mb-8 max-w-md">Découvrez la nouvelle génération de talents musicaux congolais. Orange Music Talents met en lumière les artistes de demain, portés par la passion, la créativité et l'innovation.</p>
+                <p class="text-black text-base xs:text-lg sm:text-xl mb-8 max-w-md">Découvrez la nouvelle génération de talents musicaux congolais. Orange Music Talents met en lumière les artistes de demain, portés par la passion, la créativité et l'innovation.</p>
                 <button class="bg-white text-black px-8 py-3 rounded-full w-max text-lg font-medium hover:bg-gray-100"><a href="#candidats">Découvrir les talents</a></button>
             </div>
         </div>
@@ -73,46 +73,46 @@
                 <div id="coach-carousel" class="flex transition-transform duration-500 w-full" style="transform: translateX(0%)">
                     <!-- Slide 1: Jean Goubald Kalala -->
                     <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px] md:min-h-[440px]">
-                        <!-- Texte à gauche -->
-                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-2 sm:px-4 md:px-8">
-                            <h3 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Jean Goubald<br>Kalala</h3>
-                            <p class="text-white mb-8 text-base sm:text-lg">Jean Goubald Kalala est une figure emblématique de la musique congolaise, connu pour son style engagé et ses textes profonds. Auteur-compositeur, chanteur et penseur, il mêle la chanson à la réflexion, portant un regard critique et lucide sur la société...</p>
-                            <a href="coach-goubald.html" class="bg-orange-brand text-white px-6 sm:px-8 py-3 rounded-full hover:bg-orange-600 text-base sm:text-lg font-semibold">Lire la suite</a>
-                        </div>
-                        <!-- Image à droite avec halo -->
-                        <div class="md:w-1/2 w-full flex justify-center items-center relative mt-8 md:mt-0">
+                        <!-- Image en haut sur mobile, à gauche sur desktop -->
+                        <div class="w-full md:w-1/2 flex justify-center items-center relative mt-0 mb-8 md:mb-0 md:mt-0 order-1 md:order-none">
                             <div class="relative flex items-center justify-center">
                                 <div class="absolute w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 rounded-full bg-orange-brand opacity-40 blur-2xl z-0"></div>
                                 <img src="images/goubald.png" alt="Jean Goubald Kalala" class="relative z-10 w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 object-contain rounded-xl shadow-lg">
                             </div>
                         </div>
+                        <!-- Texte en dessous sur mobile, à droite sur desktop -->
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-2 sm:px-4 md:px-8 order-2 md:order-none">
+                            <h3 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Jean Goubald<br>Kalala</h3>
+                            <p class="text-white mb-8 text-base sm:text-lg">Jean Goubald Kalala est une figure emblématique de la musique congolaise, connu pour son style engagé et ses textes profonds. Auteur-compositeur, chanteur et penseur, il mêle la chanson à la réflexion, portant un regard critique et lucide sur la société...</p>
+                            <a href="coach-goubald.html" class="bg-orange-brand text-white px-6 sm:px-8 py-3 rounded-full hover:bg-orange-600 text-base sm:text-lg font-semibold">Lire la suite</a>
+                        </div>
                     </div>
                     <!-- Slide 2: Gally Garvey -->
                     <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px] md:min-h-[440px]">
-                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-2 sm:px-4 md:px-8">
-                            <h3 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Gally Garvey</h3>
-                            <p class="text-white mb-8 text-base sm:text-lg">Auteur-compositeur-interprète, Gally Garvey s'impose comme l'une des figures montantes de la musique congolaise contemporaine. Porté par une voix unique et des sonorités modernes mêlant rumba, afrobeat et R&B, il séduit toute une génération. Icône des jeunes et symbole d'une nouvelle vague d'artistes,...</p>
-                            <a href="coach-gally.html" class="bg-orange-brand text-white px-6 sm:px-8 py-3 rounded-full hover:bg-orange-600 text-base sm:text-lg font-semibold">Lire la suite</a>
-                        </div>
-                        <div class="md:w-1/2 w-full flex justify-center items-center relative mt-8 md:mt-0">
+                        <div class="w-full md:w-1/2 flex justify-center items-center relative mt-0 mb-8 md:mb-0 md:mt-0 order-1 md:order-none">
                             <div class="relative flex items-center justify-center">
                                 <div class="absolute w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 rounded-full bg-orange-brand opacity-40 blur-2xl z-0"></div>
                                 <img src="images/gally.png" alt="Gally Garvey" class="relative z-10 w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 object-contain rounded-xl shadow-lg">
                             </div>
                         </div>
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-2 sm:px-4 md:px-8 order-2 md:order-none">
+                            <h3 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Gally Garvey</h3>
+                            <p class="text-white mb-8 text-base sm:text-lg">Auteur-compositeur-interprète, Gally Garvey s'impose comme l'une des figures montantes de la musique congolaise contemporaine. Porté par une voix unique et des sonorités modernes mêlant rumba, afrobeat et R&B, il séduit toute une génération. Icône des jeunes et symbole d'une nouvelle vague d'artistes,...</p>
+                            <a href="coach-gally.html" class="bg-orange-brand text-white px-6 sm:px-8 py-3 rounded-full hover:bg-orange-600 text-base sm:text-lg font-semibold">Lire la suite</a>
+                        </div>
                     </div>
                     <!-- Slide 3: David Ize -->
                     <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px] md:min-h-[440px]">
-                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-2 sm:px-4 md:px-8">
-                            <h3 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">David Ize</h3>
-                            <p class="text-white mb-8 text-base sm:text-lg">Chanteur, producteur et passionné de performance live. David Ize est un auteur-compositeur et producteur au style affirmé dans la musique gospel. Sa voix puissante et sa présence scénique en font un artiste complet, reconnu pour ses performances vibrantes. Figure montante de la scène africaine, ...</p>
-                            <a href="coach-david.html" class="bg-orange-brand text-white px-6 sm:px-8 py-3 rounded-full hover:bg-orange-600 text-base sm:text-lg font-semibold">Lire la suite</a>
-                        </div>
-                        <div class="md:w-1/2 w-full flex justify-center items-center relative mt-8 md:mt-0">
+                        <div class="w-full md:w-1/2 flex justify-center items-center relative mt-0 mb-8 md:mb-0 md:mt-0 order-1 md:order-none">
                             <div class="relative flex items-center justify-center">
                                 <div class="absolute w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 rounded-full bg-orange-brand opacity-40 blur-2xl z-0"></div>
                                 <img src="images/david.png" alt="David Ize" class="relative z-10 w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 object-contain rounded-xl shadow-lg">
                             </div>
+                        </div>
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-2 sm:px-4 md:px-8 order-2 md:order-none">
+                            <h3 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">David Ize</h3>
+                            <p class="text-white mb-8 text-base sm:text-lg">Chanteur, producteur et passionné de performance live. David Ize est un auteur-compositeur et producteur au style affirmé dans la musique gospel. Sa voix puissante et sa présence scénique en font un artiste complet, reconnu pour ses performances vibrantes. Figure montante de la scène africaine, ...</p>
+                            <a href="coach-david.html" class="bg-orange-brand text-white px-6 sm:px-8 py-3 rounded-full hover:bg-orange-600 text-base sm:text-lg font-semibold">Lire la suite</a>
                         </div>
                     </div>
                 </div>
