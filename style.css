@@ -1,73 +1,132 @@
 /* Base styles */
 :root {
     --orange-brand: #FF6B00;
+    --dark-bg: #181818;
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: #000000;
+    color: white;
 }
 
-/* Navigation */
-.nav-link {
-    transition: color 0.3s ease;
+/* Effet de halo amélioré */
+.coach-photo-halo {
+    box-shadow: 0 0 60px 20px rgba(255, 107, 0, 0.15);
 }
 
-/* Hero section */
-.hero-section {
-    background-color: var(--orange-brand);
+/* Animation des boutons */
+.btn-hover-effect {
+    transition: all 0.3s ease;
+    transform: translateY(0);
 }
 
-/* Custom button styles */
-.btn-orange {
-    background-color: var(--orange-brand);
+.btn-hover-effect:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(255, 107, 0, 0.25);
+}
+
+/* Effet de survol pour la carte */
+.coach-card {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.coach-card:hover {
+    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.2);
+}
+
+/* Effet de lumière dynamique */
+.coach-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(
+        circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(255, 107, 0, 0.1) 0%,
+        transparent 70%
+    );
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.coach-card:hover::before {
+    opacity: 1;
+}
+
+/* Amélioration de la bio */
+.coach-bio {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    line-height: 1.8;
+}
+
+/* Style des listes à puces */
+.coach-bio ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Responsive spécifique */
+@media (max-width: 640px) {
+    .coach-card {
+        margin-top: 1rem;
+    }
+    
+    .coach-bio {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    
+    .coach-bio ul li {
+        font-size: 0.95rem;
+    }
+}
+
+/* Transition douce pour les liens */
+a, button {
     transition: all 0.3s ease;
 }
 
-.btn-orange:hover {
-    background-color: #ff7b1a;
+/* Effet sur les icônes sociales */
+.social-icon {
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
-/* Carousel dots */
-.dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #4B5563;
+.social-icon:hover {
+    transform: translateY(-3px);
 }
 
-.dot.active {
-    background-color: var(--orange-brand);
-}
-
-/* Artist cards */
-.artist-card img {
-    width: 100%;
-    aspect-ratio: 3/4;
-    object-fit: cover;
-}
-
-/* Play button */
-.play-button {
-    width: 64px;
-    height: 64px;
-    background-color: var(--orange-brand);
-    border-radius: 50%;
-    transition: transform 0.3s ease;
-}
-
-.play-button:hover {
-    transform: scale(1.1);
-}
-
-/* Footer */
-.footer-link:hover {
-    color: var(--orange-brand);
-}
-
-/* Media queries */
+/* Optimisation du texte pour mobile */
 @media (max-width: 768px) {
-    .nav-menu {
-        display: none;
+    h1 {
+        font-size: 2rem;
     }
+    
+    .coach-bio {
+        font-size: 1rem;
+    }
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--orange-brand);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e05d00;
 }

@@ -14,6 +14,7 @@
                 extend: {
                     colors: {
                         'orange-brand': '#FF6B00',
+                        'dark-bg': '#181818',
                     }
                 }
             }
@@ -22,9 +23,9 @@
 </head>
 <body class="bg-black min-h-screen">
     <!-- Header -->
-    <header class="fixed top-0 w-full bg-black z-50">
-        <nav class="container mx-auto px-4 py-4 flex flex-wrap justify-between items-center relative">
-            <div class="flex items-center mb-2 md:mb-0">
+    <header class="fixed top-0 w-full bg-black z-50 border-b border-gray-800">
+        <nav class="container mx-auto px-4 py-3 flex flex-wrap justify-between items-center relative">
+            <div class="flex items-center">
                 <span class="text-orange-brand font-bold text-xl">Orange</span>
                 <div class="ml-2">
                     <div class="text-white font-bold text-sm">Music</div>
@@ -32,100 +33,119 @@
                 </div>
             </div>
             <!-- Burger button -->
-            <button id="burger-btn" class="md:hidden text-white text-3xl focus:outline-none ml-auto" aria-label="Ouvrir le menu">
-                <i class="fas fa-bars"></i>
+            <button id="burger-btn" class="md:hidden text-white w-12 h-12 flex items-center justify-center focus:outline-none ml-auto" aria-label="Menu">
+                <i class="fas fa-bars text-2xl"></i>
             </button>
             <!-- Menu principal -->
-            <div id="main-menu" class="hidden md:flex flex-wrap items-center space-x-4 md:space-x-8 w-full md:w-auto justify-center md:justify-end absolute md:static top-16 left-0 bg-black md:bg-transparent p-6 md:p-0 z-40 transition-all duration-300">
-                <a href="#coachs" class="text-white hover:text-orange-brand py-2 block">Nos coachs</a>
-                <a href="#candidats" class="text-white hover:text-orange-brand py-2 block">Nos Candidats</a>
-                <a href="#bestof" class="text-white hover:text-orange-brand py-2 block">Best of</a>
-                <a href="#partenaires" class="text-white hover:text-orange-brand py-2 block">Nos partenaires</a>
-                <button class="bg-orange-brand text-white px-4 md:px-6 py-2 rounded-full hover:bg-orange-600 mt-2 md:mt-0 w-full md:w-auto">Vote</button>
+            <div id="main-menu" class="hidden md:flex flex-wrap items-center space-x-4 md:space-x-8 w-full md:w-auto justify-center md:justify-end absolute md:static top-full left-0 bg-black md:bg-transparent p-6 md:p-0 z-40 transition-all duration-300 backdrop-blur-md">
+                <a href="#coachs" class="text-white hover:text-orange-brand py-3 px-4 block text-lg md:text-base">Nos mentors</a>
+                <a href="#candidats" class="text-white hover:text-orange-brand py-3 px-4 block text-lg md:text-base">Les talents</a>
+                <a href="#bestof" class="text-white hover:text-orange-brand py-3 px-4 block text-lg md:text-base">Best of</a>
+                <a href="#partenaires" class="text-white hover:text-orange-brand py-3 px-4 block text-lg md:text-base">Partenaires</a>
+                <button class="bg-orange-brand text-white px-6 py-3 rounded-full hover:bg-orange-600 mt-2 md:mt-0 w-full md:w-auto text-lg md:text-base font-semibold">Voter maintenant</button>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section (bannière) -->
-    <section class="bg-[#FF6B00] min-h-screen flex items-center py-8 md:py-0">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-0">
-            <!-- Image bannière à gauche -->
-            <div class="w-full md:w-1/2 flex justify-center md:justify-start mt-8 md:mt-0">
-                <img src="images/banniere.png" alt="Bannière Orange Music Talents" class="w-full max-w-xs sm:max-w-md md:max-w-lg h-auto rounded-xl shadow-lg">
+    <!-- Hero Section -->
+    <section class="bg-orange-brand min-h-[80vh] md:min-h-screen flex items-center pt-20 pb-12 md:py-0">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+            <!-- Image bannière -->
+            <div class="w-full md:w-1/2 flex justify-center">
+                <img src="images/banniere.png" alt="Bannière Orange Music Talents" class="w-full max-w-xs sm:max-w-md md:max-w-lg h-auto rounded-xl shadow-2xl transform hover:scale-105 transition duration-500">
             </div>
-            <!-- Texte à droite -->
+            <!-- Texte -->
             <div class="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-                <h1 class="text-black font-bold text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-4 break-words">
+                <h1 class="text-black font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight mb-6">
                     Orange <br>
                     <span class="text-white">Music<br>Talents</span>
                 </h1>
-                <p class="text-black text-base xs:text-lg sm:text-xl mb-8 max-w-md">Découvrez la nouvelle génération de talents musicaux congolais. Orange Music Talents met en lumière les artistes de demain, portés par la passion, la créativité et l'innovation.</p>
-                <button class="bg-white text-black px-8 py-3 rounded-full w-max text-lg font-medium hover:bg-gray-100"><a href="#candidats">Découvrir les talents</a></button>
+                <p class="text-black text-lg sm:text-xl mb-8 max-w-md">
+                    Le tremplin musical qui révèle les talents de la scène congolaise. 
+                    Découvrez les artistes émergents accompagnés par des icônes de la musique africaine 
+                    dans une compétition unique mêlant performances live et votes du public.
+                </p>
+                <a href="#candidats" class="bg-white text-black px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition transform hover:scale-105 shadow-lg">
+                    Découvrir les talents
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Coaches Section (refonte, overflow fix) -->
+    <!-- Coaches Section -->
     <section id="coachs" class="py-16 bg-black">
-        <div class="container mx-auto px-2 sm:px-4">
-            <h2 class="text-orange-brand text-2xl sm:text-3xl font-bold mb-8">Nos coachs</h2>
+        <div class="container mx-auto px-4">
+            <h2 class="text-orange-brand text-3xl font-bold mb-12 text-center">Nos mentors artistiques</h2>
             <div class="relative overflow-hidden">
-                <div id="coach-carousel" class="flex transition-transform duration-500 w-full" style="transform: translateX(0%)">
-                    <!-- Slide 1: Jean Goubald Kalala -->
-                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px] md:min-h-[440px]">
-                        <!-- Image en haut sur mobile, à gauche sur desktop -->
-                        <div class="w-full md:w-1/2 flex justify-center items-center relative mt-0 mb-8 md:mb-0 md:mt-0 order-1 md:order-none">
+                <div id="coach-carousel" class="flex transition-transform duration-500 w-full snap-x snap-mandatory md:snap-none" style="transform: translateX(0%)">
+                    <!-- Slide 1 -->
+                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[500px] snap-center">
+                        <div class="w-full md:w-1/2 flex justify-center items-center relative">
                             <div class="relative flex items-center justify-center">
-                                <div class="absolute w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 rounded-full bg-orange-brand opacity-40 blur-2xl z-0"></div>
-                                <img src="images/goubald.png" alt="Jean Goubald Kalala" class="relative z-10 w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 object-contain rounded-xl shadow-lg">
+                                <div class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full bg-orange-brand opacity-40 blur-2xl z-0"></div>
+                                <img src="images/goubald.png" alt="Jean Goubald Kalala" class="relative z-10 w-64 h-64 md:w-80 md:h-80 object-cover rounded-xl shadow-lg border-2 border-orange-brand">
                             </div>
                         </div>
-                        <!-- Texte en dessous sur mobile, à droite sur desktop -->
-                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-2 sm:px-4 md:px-8 order-2 md:order-none">
-                            <h3 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Jean Goubald<br>Kalala</h3>
-                            <p class="text-white mb-8 text-base sm:text-lg">Jean Goubald Kalala est une figure emblématique de la musique congolaise, connu pour son style engagé et ses textes profonds. Auteur-compositeur, chanteur et penseur, il mêle la chanson à la réflexion, portant un regard critique et lucide sur la société...</p>
-                            <a href="coach-goubald.html" class="bg-orange-brand text-white px-6 sm:px-8 py-3 rounded-full hover:bg-orange-600 text-base sm:text-lg font-semibold">Lire la suite</a>
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-center md:items-start px-4 md:px-8">
+                            <h3 class="text-white text-3xl md:text-4xl font-bold mb-4 text-center md:text-left">Jean Goubald<br>Kalala</h3>
+                            <p class="text-white mb-8 text-lg text-center md:text-left">
+                                Figure emblématique avec 25 ans de carrière, ce poète-musicien a formé toute une génération. 
+                                Lauréat du Prix Ngoma d'Or, son approche engagée de la musique inspire les talents à trouver leur voix unique.
+                            </p>
+                            <a href="coach-goubald.html" class="bg-orange-brand text-white px-8 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold shadow-lg">
+                                Profil complet
+                            </a>
                         </div>
                     </div>
-                    <!-- Slide 2: Gally Garvey -->
-                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px] md:min-h-[440px]">
-                        <div class="w-full md:w-1/2 flex justify-center items-center relative mt-0 mb-8 md:mb-0 md:mt-0 order-1 md:order-none">
+                    <!-- Slide 2 -->
+                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[500px] snap-center">
+                        <div class="w-full md:w-1/2 flex justify-center items-center relative">
                             <div class="relative flex items-center justify-center">
-                                <div class="absolute w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 rounded-full bg-orange-brand opacity-40 blur-2xl z-0"></div>
-                                <img src="images/gally.png" alt="Gally Garvey" class="relative z-10 w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 object-contain rounded-xl shadow-lg">
+                                <div class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full bg-orange-brand opacity-40 blur-2xl z-0"></div>
+                                <img src="images/gally.png" alt="Gally Garvey" class="relative z-10 w-64 h-64 md:w-80 md:h-80 object-cover rounded-xl shadow-lg border-2 border-orange-brand">
                             </div>
                         </div>
-                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-2 sm:px-4 md:px-8 order-2 md:order-none">
-                            <h3 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">Gally Garvey</h3>
-                            <p class="text-white mb-8 text-base sm:text-lg">Auteur-compositeur-interprète, Gally Garvey s'impose comme l'une des figures montantes de la musique congolaise contemporaine. Porté par une voix unique et des sonorités modernes mêlant rumba, afrobeat et R&B, il séduit toute une génération. Icône des jeunes et symbole d'une nouvelle vague d'artistes,...</p>
-                            <a href="coach-gally.html" class="bg-orange-brand text-white px-6 sm:px-8 py-3 rounded-full hover:bg-orange-600 text-base sm:text-lg font-semibold">Lire la suite</a>
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-center md:items-start px-4 md:px-8">
+                            <h3 class="text-white text-3xl md:text-4xl font-bold mb-4 text-center md:text-left">Gally Garvey</h3>
+                            <p class="text-white mb-8 text-lg text-center md:text-left">
+                                Star montante du R&B africain avec plus de 10 millions de streams. 
+                                Son style fusion mêlant tradition et modernité en fait un mentor idéal pour les artistes cherchant à se renouveler.
+                            </p>
+                            <a href="coach-gally.html" class="bg-orange-brand text-white px-8 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold shadow-lg">
+                                Profil complet
+                            </a>
                         </div>
                     </div>
-                    <!-- Slide 3: David Ize -->
-                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[400px] md:min-h-[440px]">
-                        <div class="w-full md:w-1/2 flex justify-center items-center relative mt-0 mb-8 md:mb-0 md:mt-0 order-1 md:order-none">
+                    <!-- Slide 3 -->
+                    <div class="w-full shrink-0 flex flex-col md:flex-row items-center justify-between min-h-[500px] snap-center">
+                        <div class="w-full md:w-1/2 flex justify-center items-center relative">
                             <div class="relative flex items-center justify-center">
-                                <div class="absolute w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 rounded-full bg-orange-brand opacity-40 blur-2xl z-0"></div>
-                                <img src="images/david.png" alt="David Ize" class="relative z-10 w-56 sm:w-72 md:w-80 h-56 sm:h-72 md:h-80 object-contain rounded-xl shadow-lg">
+                                <div class="absolute w-64 h-64 md:w-80 md:h-80 rounded-full bg-orange-brand opacity-40 blur-2xl z-0"></div>
+                                <img src="images/david.png" alt="David Ize" class="relative z-10 w-64 h-64 md:w-80 md:h-80 object-cover rounded-xl shadow-lg border-2 border-orange-brand">
                             </div>
                         </div>
-                        <div class="md:w-1/2 w-full flex flex-col justify-center items-start px-2 sm:px-4 md:px-8 order-2 md:order-none">
-                            <h3 class="text-white text-3xl sm:text-4xl md:text-5xl font-bold mb-4">David Ize</h3>
-                            <p class="text-white mb-8 text-base sm:text-lg">Chanteur, producteur et passionné de performance live. David Ize est un auteur-compositeur et producteur au style affirmé dans la musique gospel. Sa voix puissante et sa présence scénique en font un artiste complet, reconnu pour ses performances vibrantes. Figure montante de la scène africaine, ...</p>
-                            <a href="coach-david.html" class="bg-orange-brand text-white px-6 sm:px-8 py-3 rounded-full hover:bg-orange-600 text-base sm:text-lg font-semibold">Lire la suite</a>
+                        <div class="md:w-1/2 w-full flex flex-col justify-center items-center md:items-start px-4 md:px-8">
+                            <h3 class="text-white text-3xl md:text-4xl font-bold mb-4 text-center md:text-left">David Ize</h3>
+                            <p class="text-white mb-8 text-lg text-center md:text-left">
+                                Producteur primé et voix puissante du gospel africain. 
+                                Expert en performance scénique, il aide les talents à canaliser leur énergie et connecter avec leur public.
+                            </p>
+                            <a href="coach-david.html" class="bg-orange-brand text-white px-8 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold shadow-lg">
+                                Profil complet
+                            </a>
                         </div>
                     </div>
                 </div>
-                <button id="coach-prev" class="absolute -left-8 sm:-left-12 top-1/2 -translate-y-1/2 bg-orange-brand text-white w-10 h-10 rounded-full flex items-center justify-center z-30 shadow-lg border-4 border-black hover:scale-110 transition-all duration-200 focus:outline-none">
+                <button id="coach-prev" class="absolute left-2 md:-left-12 top-1/2 -translate-y-1/2 bg-orange-brand text-white w-12 h-12 rounded-full flex items-center justify-center z-30 shadow-lg border-4 border-black hover:scale-110 transition-all">
                     <i class="fas fa-chevron-left text-xl"></i>
                 </button>
-                <button id="coach-next" class="absolute -right-8 sm:-right-12 top-1/2 -translate-y-1/2 bg-orange-brand text-white w-10 h-10 rounded-full flex items-center justify-center z-30 shadow-lg border-4 border-black hover:scale-110 transition-all duration-200 focus:outline-none">
+                <button id="coach-next" class="absolute right-2 md:-right-12 top-1/2 -translate-y-1/2 bg-orange-brand text-white w-12 h-12 rounded-full flex items-center justify-center z-30 shadow-lg border-4 border-black hover:scale-110 transition-all">
                     <i class="fas fa-chevron-right text-xl"></i>
                 </button>
-                <div class="flex justify-center mt-8 space-x-2" id="coach-dots">
-                    <div class="w-2 h-2 rounded-full bg-orange-brand"></div>
-                    <div class="w-2 h-2 rounded-full bg-gray-600"></div>
-                    <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                <div class="flex justify-center mt-8 space-x-3" id="coach-dots">
+                    <div class="w-3 h-3 rounded-full bg-orange-brand cursor-pointer"></div>
+                    <div class="w-3 h-3 rounded-full bg-gray-600 cursor-pointer"></div>
+                    <div class="w-3 h-3 rounded-full bg-gray-600 cursor-pointer"></div>
                 </div>
             </div>
         </div>
@@ -133,99 +153,119 @@
 
     <!-- Artists Section -->
     <section id="candidats" class="py-16 bg-black">
-        <div class="container mx-auto px-2 sm:px-4">
-            <div class="rounded-2xl border-4 border-orange-brand p-4 sm:p-8" style="border-color: #FF6B00;">
-                <h2 class="text-orange-brand text-2xl sm:text-3xl font-bold mb-8">Nos Candidats</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
-                    <div class="flex flex-col items-center">
-                        <img src="images/candidats.png" alt="Candidat 3" class="w-32 h-32 sm:w-48 sm:h-48 object-cover mb-4 rounded-xl">
-                        <h3 class="text-orange-brand text-lg sm:text-xl">Candidat 3</h3>
-                        <p class="text-white">Chant</p>
+        <div class="container mx-auto px-4">
+            <div class="rounded-2xl border-2 border-orange-brand p-6 md:p-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-orange-brand text-3xl font-bold mb-4">Les talents en compétition</h2>
+                    <p class="text-white text-lg max-w-2xl mx-auto">
+                        Sélectionnés parmi des centaines de participants, ces artistes représentent 
+                        la relève musicale du Congo. Découvrez leurs parcours et votez pour vos préférés.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="flex flex-col items-center p-4 bg-dark-bg rounded-xl transform hover:scale-105 transition duration-300">
+                        <img src="images/candidats.png" alt="Candidat 3" class="w-full h-48 object-cover mb-4 rounded-lg shadow">
+                        <h3 class="text-orange-brand text-xl font-semibold">Sarah M.</h3>
+                        <p class="text-white mb-3">Soul moderne</p>
+                        <button class="bg-orange-brand text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition">
+                            <i class="fas fa-heart mr-2"></i>Voter
+                        </button>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <img src="images/candidats.png" alt="Candidat 4" class="w-32 h-32 sm:w-48 sm:h-48 object-cover mb-4 rounded-xl">
-                        <h3 class="text-orange-brand text-lg sm:text-xl">Candidat 4</h3>
-                        <p class="text-white">Chant</p>
+                    <div class="flex flex-col items-center p-4 bg-dark-bg rounded-xl transform hover:scale-105 transition duration-300">
+                        <img src="images/candidats.png" alt="Candidat 4" class="w-full h-48 object-cover mb-4 rounded-lg shadow">
+                        <h3 class="text-orange-brand text-xl font-semibold">Didier K.</h3>
+                        <p class="text-white mb-3">Rumba fusion</p>
+                        <button class="bg-orange-brand text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition">
+                            <i class="fas fa-heart mr-2"></i>Voter
+                        </button>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <img src="images/candidats.png" alt="Candidat 5" class="w-32 h-32 sm:w-48 sm:h-48 object-cover mb-4 rounded-xl">
-                        <h3 class="text-orange-brand text-lg sm:text-xl">Candidat 5</h3>
-                        <p class="text-white">Chant</p>
+                    <div class="flex flex-col items-center p-4 bg-dark-bg rounded-xl transform hover:scale-105 transition duration-300">
+                        <img src="images/candidats.png" alt="Candidat 5" class="w-full h-48 object-cover mb-4 rounded-lg shadow">
+                        <h3 class="text-orange-brand text-xl font-semibold">Amina B.</h3>
+                        <p class="text-white mb-3">Afro-pop</p>
+                        <button class="bg-orange-brand text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition">
+                            <i class="fas fa-heart mr-2"></i>Voter
+                        </button>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <img src="images/candidats.png" alt="Candidat 6" class="w-32 h-32 sm:w-48 sm:h-48 object-cover mb-4 rounded-xl">
-                        <h3 class="text-orange-brand text-lg sm:text-xl">Candidat 6</h3>
-                        <p class="text-white">Chant</p>
+                    <div class="flex flex-col items-center p-4 bg-dark-bg rounded-xl transform hover:scale-105 transition duration-300">
+                        <img src="images/candidats.png" alt="Candidat 6" class="w-full h-48 object-cover mb-4 rounded-lg shadow">
+                        <h3 class="text-orange-brand text-xl font-semibold">Papa W.</h3>
+                        <p class="text-white mb-3">Rap engagé</p>
+                        <button class="bg-orange-brand text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-orange-600 transition">
+                            <i class="fas fa-heart mr-2"></i>Voter
+                        </button>
                     </div>
-                    <div class="flex flex-col items-center">
-                        <img src="images/candidats.png" alt="Candidat 7" class="w-32 h-32 sm:w-48 sm:h-48 object-cover mb-4 rounded-xl">
-                        <h3 class="text-orange-brand text-lg sm:text-xl">Candidat 7</h3>
-                        <p class="text-white">Chant</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <img src="images/candidats.png" alt="Candidat 8" class="w-32 h-32 sm:w-48 sm:h-48 object-cover mb-4 rounded-xl">
-                        <h3 class="text-orange-brand text-lg sm:text-xl">Candidat 8</h3>
-                        <p class="text-white">Chant</p>
-                    </div>
+                </div>
+                <div class="text-center mt-12">
+                    <button class="bg-white text-orange-brand px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition shadow-lg">
+                        Voir tous les talents
+                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Candidates Section (Coverflow) -->
-    <section class="py-16 bg-[#FF6B00] relative overflow-hidden">
-        <div class="container mx-auto px-2 sm:px-4 flex flex-col md:flex-row items-center justify-between">
-            <!-- Texte à gauche -->
-            <div class="md:w-1/2 w-full mb-8 md:mb-0">
-                <h2 class="text-black text-3xl sm:text-5xl font-bold mb-6 leading-tight">Ils ont tenté<br>leurs chances</h2>
-                <p class="text-white text-base sm:text-lg mb-8">Des centaines de candidats ont relevé le défi et partagé leur passion pour la musique. Découvrez leurs parcours, leurs performances et leurs rêves sur la scène Orange Music Talents.</p>
+    <section class="py-16 bg-orange-brand relative overflow-hidden">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between">
+            <!-- Texte -->
+            <div class="md:w-1/2 w-full mb-12 md:mb-0">
+                <h2 class="text-black text-3xl md:text-5xl font-bold mb-6 leading-tight">Ils ont tenté<br>leurs chances</h2>
+                <p class="text-white text-lg mb-8">
+                    Des centaines de candidats ont relevé le défi Orange Music Talents. 
+                    Découvrez leurs parcours exceptionnels et ce que le concours leur a apporté.
+                </p>
+                <div class="flex space-x-4">
+                    <div class="bg-white bg-opacity-20 p-4 rounded-xl">
+                        <div class="text-white text-2xl font-bold">250+</div>
+                        <div class="text-white text-sm">Candidats</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-4 rounded-xl">
+                        <div class="text-white text-2xl font-bold">15</div>
+                        <div class="text-white text-sm">Villes</div>
+                    </div>
+                    <div class="bg-white bg-opacity-20 p-4 rounded-xl">
+                        <div class="text-white text-2xl font-bold">5M</div>
+                        <div class="text-white text-sm">Vues</div>
+                    </div>
+                </div>
             </div>
-            <!-- Carrousel Coverflow à droite -->
-            <div class="md:w-1/2 w-full flex flex-col items-center relative">
-                <div class="relative w-full flex items-center justify-center" style="height: 350px;">
-                    <button id="candidat-prev" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 bg-white text-[#FF6B00] w-10 h-10 rounded-full flex items-center justify-center z-10 shadow"><i class="fas fa-chevron-left"></i></button>
-                    <div id="candidat-coverflow" class="relative w-full h-full flex items-center justify-center" style="perspective: 1200px;">
-                        <!-- Cartes des candidats -->
+            <!-- Carrousel -->
+            <div class="md:w-1/2 w-full">
+                <div class="relative w-full" style="height: 400px;">
+                    <button id="candidat-prev" class="absolute left-4 top-1/2 -translate-y-1/2 bg-white text-orange-brand w-12 h-12 rounded-full flex items-center justify-center z-10 shadow-lg hover:scale-110 transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div id="candidat-coverflow" class="relative w-full h-full flex items-center justify-center">
+                        <!-- Cartes -->
                         <div class="candidat-card absolute transition-all duration-500" data-index="0">
-                            <img src="images/TemplateCandidat1.png" alt="Candidat 1" class="w-40 sm:w-56 h-56 sm:h-72 object-cover rounded-2xl border-4 border-white shadow-lg">
-                            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 p-2 sm:p-4 rounded-b-2xl flex items-end">
-                                <span class="text-[#FF6B00] font-bold text-base sm:text-lg mr-2">Candidat</span>
-                                <span class="bg-[#FF6B00] text-white font-bold px-2 py-1 rounded text-xs sm:text-sm">01</span>
-                                <span class="text-black font-bold text-base sm:text-xl ml-2">Talent vocal exceptionnel</span>
+                            <img src="images/TemplateCandidat1.png" alt="Candidat 1" class="w-48 h-64 md:w-56 md:h-80 object-cover rounded-2xl border-4 border-white shadow-xl">
+                            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 p-4 rounded-b-2xl">
+                                <div class="flex items-center mb-1">
+                                    <span class="text-orange-brand font-bold mr-2">Candidat</span>
+                                    <span class="bg-orange-brand text-white font-bold px-2 py-1 rounded text-xs">01</span>
+                                </div>
+                                <div class="text-black font-bold">Finaliste 2023 - Talent vocal exceptionnel</div>
                             </div>
                         </div>
                         <div class="candidat-card absolute transition-all duration-500" data-index="1">
-                            <img src="images/TemplateCandidat2.png" alt="Candidat 2" class="w-40 sm:w-56 h-56 sm:h-72 object-cover rounded-2xl border-4 border-white shadow-lg">
-                            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 p-2 sm:p-4 rounded-b-2xl flex items-end">
-                                <span class="text-[#FF6B00] font-bold text-base sm:text-lg mr-2">Candidat</span>
-                                <span class="bg-[#FF6B00] text-white font-bold px-2 py-1 rounded text-xs sm:text-sm">02</span>
-                                <span class="text-black font-bold text-base sm:text-xl ml-2">Performance scénique unique</span>
-                            </div>
-                        </div>
-                        <div class="candidat-card absolute transition-all duration-500" data-index="2">
-                            <img src="images/TemplateCandidat3.png" alt="Candidat 3" class="w-40 sm:w-56 h-56 sm:h-72 object-cover rounded-2xl border-4 border-white shadow-lg">
-                            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 p-2 sm:p-4 rounded-b-2xl flex items-end">
-                                <span class="text-[#FF6B00] font-bold text-base sm:text-lg mr-2">Candidat</span>
-                                <span class="bg-[#FF6B00] text-white font-bold px-2 py-1 rounded text-xs sm:text-sm">03</span>
-                                <span class="text-black font-bold text-base sm:text-xl ml-2">Créativité et originalité</span>
-                            </div>
-                        </div>
-                        <div class="candidat-card absolute transition-all duration-500" data-index="3">
-                            <img src="images/TemplateCandidat4.png" alt="Candidat 4" class="w-40 sm:w-56 h-56 sm:h-72 object-cover rounded-2xl border-4 border-white shadow-lg">
-                            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 p-2 sm:p-4 rounded-b-2xl flex items-end">
-                                <span class="text-[#FF6B00] font-bold text-base sm:text-lg mr-2">Candidat</span>
-                                <span class="bg-[#FF6B00] text-white font-bold px-2 py-1 rounded text-xs sm:text-sm">04</span>
-                                <span class="text-black font-bold text-base sm:text-xl ml-2">Passion et énergie</span>
+                            <img src="images/TemplateCandidat2.png" alt="Candidat 2" class="w-48 h-64 md:w-56 md:h-80 object-cover rounded-2xl border-4 border-white shadow-xl">
+                            <div class="absolute bottom-0 left-0 w-full bg-white bg-opacity-90 p-4 rounded-b-2xl">
+                                <div class="flex items-center mb-1">
+                                    <span class="text-orange-brand font-bold mr-2">Candidat</span>
+                                    <span class="bg-orange-brand text-white font-bold px-2 py-1 rounded text-xs">02</span>
+                                </div>
+                                <div class="text-black font-bold">Performance scénique mémorable</div>
                             </div>
                         </div>
                     </div>
-                    <button id="candidat-next" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 bg-white text-[#FF6B00] w-10 h-10 rounded-full flex items-center justify-center z-10 shadow"><i class="fas fa-chevron-right"></i></button>
+                    <button id="candidat-next" class="absolute right-4 top-1/2 -translate-y-1/2 bg-white text-orange-brand w-12 h-12 rounded-full flex items-center justify-center z-10 shadow-lg hover:scale-110 transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                <div class="flex justify-center mt-8 space-x-2" id="candidat-dots">
-                    <div class="w-2 h-2 rounded-full bg-white border border-[#FF6B00]"></div>
-                    <div class="w-2 h-2 rounded-full bg-white border border-[#FF6B00]"></div>
-                    <div class="w-2 h-2 rounded-full bg-white border border-[#FF6B00]"></div>
-                    <div class="w-2 h-2 rounded-full bg-white border border-[#FF6B00]"></div>
+                <div class="flex justify-center mt-8 space-x-3" id="candidat-dots">
+                    <div class="w-3 h-3 rounded-full bg-white cursor-pointer"></div>
+                    <div class="w-3 h-3 rounded-full bg-white bg-opacity-50 cursor-pointer"></div>
                 </div>
             </div>
         </div>
@@ -233,55 +273,108 @@
 
     <!-- Best Of Section -->
     <section id="bestof" class="py-16 bg-black">
-        <div class="container mx-auto px-2 sm:px-4 flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
-            <!-- Vidéo à gauche -->
-            <div class="md:w-1/2 w-full flex justify-center items-center mb-8 md:mb-0">
-                <div class="relative w-full max-w-xs sm:max-w-md md:max-w-lg aspect-video border-2 border-orange-brand rounded-lg overflow-hidden flex items-center justify-center bg-gray-700">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RR_emoQd2jY?si=NQk901Y6zWuVbkgT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full h-full"></iframe>
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            <!-- Vidéo -->
+            <div class="w-full md:w-1/2 flex justify-center">
+                <div class="relative w-full max-w-lg aspect-video border-2 border-orange-brand rounded-xl overflow-hidden bg-gray-800 shadow-2xl">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/RR_emoQd2jY" 
+                            title="Best of Orange Music Talents" frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen class="absolute inset-0 w-full h-full"></iframe>
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="play-button opacity-0">
+                            <i class="fas fa-play text-white text-xl"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Texte à droite -->
-            <div class="md:w-1/2 w-full flex flex-col justify-center">
-                <h2 class="text-orange-brand text-3xl sm:text-4xl font-bold mb-4">Best of</h2>
-                <p class="text-white text-base sm:text-lg">Revivez les meilleurs moments du concours : prestations inoubliables, émotions fortes et rencontres uniques. Plongez dans l'univers vibrant des talents Orange.</p>
+            <!-- Texte -->
+            <div class="w-full md:w-1/2">
+                <h2 class="text-orange-brand text-3xl md:text-4xl font-bold mb-6">Moments mémorables</h2>
+                <p class="text-white text-lg mb-8">
+                    Revivez les temps forts de cette édition : des prestations époustouflantes, 
+                    des duos inattendus entre mentors et talents, et l'émotion pure des lives.
+                    La magie de la musique congolaise dans ce best-of exclusif.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="bg-orange-brand text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition flex items-center">
+                        <i class="fas fa-play mr-2"></i> Voir le replay
+                    </button>
+                    <button class="bg-white text-orange-brand px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition flex items-center">
+                        <i class="fas fa-share-alt mr-2"></i> Partager
+                    </button>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Partners Section (carousel autoplay) -->
-    <section id="partenaires" class="py-16 bg-black">
-        <div class="container mx-auto px-2 sm:px-4">
-            <h2 class="text-orange-brand text-2xl sm:text-3xl font-bold mb-8 text-left">Nos partenaires</h2>
+    <!-- Partners Section -->
+    <section id="partenaires" class="py-16 bg-dark-bg">
+        <div class="container mx-auto px-4">
+            <h2 class="text-orange-brand text-3xl font-bold mb-12 text-center">Nos partenaires</h2>
             <div class="relative overflow-hidden">
                 <div id="partenaire-carousel" class="flex transition-transform duration-500 w-full" style="transform: translateX(0%)">
-                    <div class="w-full md:w-1/2 flex justify-center items-center shrink-0">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" class="h-12 sm:h-20 w-auto">
+                    <div class="w-full flex justify-center items-center shrink-0 py-8">
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Spotify_logo_without_text.svg" alt="Spotify" class="h-16 w-auto opacity-90 hover:opacity-100 transition">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Bomaye_Musik_logo.png" alt="Bomaye" class="h-20 w-auto opacity-90 hover:opacity-100 transition">
+                        </div>
                     </div>
-                    <div class="w-full md:w-1/2 flex justify-center items-center shrink-0">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Bomaye_Musik_logo.png" alt="Bomaye" class="h-16 sm:h-24 w-auto">
+                    <div class="w-full flex justify-center items-center shrink-0 py-8">
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Radio_Okapi_logo.png" alt="Radio Okapi" class="h-16 w-auto opacity-90 hover:opacity-100 transition">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Vodacom_Logo.svg" alt="Vodacom" class="h-12 w-auto opacity-90 hover:opacity-100 transition">
+                        </div>
                     </div>
                 </div>
-                <div class="flex justify-center mt-8 space-x-2" id="partenaire-dots">
-                    <div class="w-2 h-2 rounded-full bg-orange-brand"></div>
-                    <div class="w-2 h-2 rounded-full bg-gray-600"></div>
+                <div class="flex justify-center mt-8 space-x-3" id="partenaire-dots">
+                    <div class="w-3 h-3 rounded-full bg-orange-brand cursor-pointer"></div>
+                    <div class="w-3 h-3 rounded-full bg-gray-600 cursor-pointer"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-black py-8 border-t border-gray-800">
-        <div class="container mx-auto px-2 sm:px-4">
-            <div class="flex flex-col sm:flex-row justify-center sm:space-x-8 space-y-4 sm:space-y-0 text-white text-sm">
-                <a href="#" class="hover:text-orange-brand">musictalents.orange.cd</a>
-                <a href="#" class="hover:text-orange-brand">CGU</a>
-                <a href="#" class="hover:text-orange-brand">Règlement du jeu</a>
-                <a href="#" class="hover:text-orange-brand">Contactez-nous</a>
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
+                <div class="flex items-center">
+                    <span class="text-orange-brand font-bold text-xl">Orange</span>
+                    <div class="ml-2">
+                        <div class="text-white font-bold text-sm">Music</div>
+                        <div class="text-white font-bold text-sm">Talents</div>
+                    </div>
+                </div>
+                <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-white">
+                    <a href="#" class="hover:text-orange-brand transition">musictalents.orange.cd</a>
+                    <a href="#" class="hover:text-orange-brand transition">CGU</a>
+                    <a href="#" class="hover:text-orange-brand transition">Règlement</a>
+                    <a href="#" class="hover:text-orange-brand transition">Contact</a>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-white hover:text-orange-brand text-xl transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-orange-brand text-xl transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-orange-brand text-xl transition">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="#" class="text-white hover:text-orange-brand text-xl transition">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="mt-12 text-center text-gray-500 text-sm">
+                © 2023 Orange Music Talents. Tous droits réservés.
             </div>
         </div>
     </footer>
+
     <script>
-    // Carrousel Coachs (overflow fix)
+    // Carrousel Coachs
     const carousel = document.getElementById('coach-carousel');
     const prevBtn = document.getElementById('coach-prev');
     const nextBtn = document.getElementById('coach-next');
@@ -292,11 +385,9 @@
     function updateCarousel() {
         carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
         for (let i = 0; i < dots.length; i++) {
-            dots[i].classList.remove('bg-orange-brand');
-            dots[i].classList.add('bg-gray-600');
+            dots[i].classList.toggle('bg-orange-brand', i === currentSlide);
+            dots[i].classList.toggle('bg-gray-600', i !== currentSlide);
         }
-        dots[currentSlide].classList.add('bg-orange-brand');
-        dots[currentSlide].classList.remove('bg-gray-600');
     }
 
     prevBtn.addEventListener('click', () => {
@@ -313,8 +404,8 @@
             updateCarousel();
         });
     }
-    updateCarousel();
-    // Coverflow JS pour candidats
+
+    // Coverflow Candidats
     const candidatCards = document.querySelectorAll('.candidat-card');
     const candidatDots = document.getElementById('candidat-dots').children;
     let candidatCurrent = 0;
@@ -324,17 +415,15 @@
         candidatCards.forEach((card, i) => {
             const offset = i - candidatCurrent;
             card.style.zIndex = 10 - Math.abs(offset);
-            card.style.opacity = Math.abs(offset) > 2 ? 0 : 1;
-            card.style.transform = `translateX(${offset * 80}px) scale(${offset === 0 ? 1.15 : 0.9}) rotateY(${offset *  -35}deg)`;
+            card.style.opacity = Math.abs(offset) > 1 ? 0 : 1;
+            card.style.transform = `translateX(${offset * 100}px) scale(${offset === 0 ? 1 : 0.9})`;
             card.style.pointerEvents = offset === 0 ? 'auto' : 'none';
         });
         for (let i = 0; i < candidatDots.length; i++) {
-            candidatDots[i].classList.remove('bg-[#FF6B00]');
-            candidatDots[i].classList.add('bg-white');
+            candidatDots[i].classList.toggle('bg-opacity-50', i !== candidatCurrent);
         }
-        candidatDots[candidatCurrent].classList.add('bg-[#FF6B00]');
-        candidatDots[candidatCurrent].classList.remove('bg-white');
     }
+
     document.getElementById('candidat-prev').onclick = () => {
         candidatCurrent = (candidatCurrent - 1 + totalCandidats) % totalCandidats;
         updateCoverflow();
@@ -349,8 +438,8 @@
             updateCoverflow();
         };
     }
-    updateCoverflow();
-    // Carrousel partenaires autoplay
+
+    // Carrousel Partenaires autoplay
     const partenaireCarousel = document.getElementById('partenaire-carousel');
     const partenaireDots = document.getElementById('partenaire-dots').children;
     const partenaireTotal = partenaireCarousel.children.length;
@@ -359,45 +448,49 @@
     function updatePartenaireCarousel() {
         partenaireCarousel.style.transform = `translateX(-${partenaireCurrent * 100}%)`;
         for (let i = 0; i < partenaireDots.length; i++) {
-            partenaireDots[i].classList.remove('bg-orange-brand');
-            partenaireDots[i].classList.add('bg-gray-600');
+            partenaireDots[i].classList.toggle('bg-orange-brand', i === partenaireCurrent);
+            partenaireDots[i].classList.toggle('bg-gray-600', i !== partenaireCurrent);
         }
-        partenaireDots[partenaireCurrent].classList.add('bg-orange-brand');
-        partenaireDots[partenaireCurrent].classList.remove('bg-gray-600');
     }
+
+    setInterval(() => {
+        partenaireCurrent = (partenaireCurrent + 1) % partenaireTotal;
+        updatePartenaireCarousel();
+    }, 3000);
+
     for (let i = 0; i < partenaireDots.length; i++) {
         partenaireDots[i].addEventListener('click', () => {
             partenaireCurrent = i;
             updatePartenaireCarousel();
         });
     }
-    // Autoplay toutes les secondes
-    setInterval(() => {
-        partenaireCurrent = (partenaireCurrent + 1) % partenaireTotal;
-        updatePartenaireCarousel();
-    }, 1000);
-    updatePartenaireCarousel();
+
     // Menu burger mobile
     const burgerBtn = document.getElementById('burger-btn');
     const mainMenu = document.getElementById('main-menu');
     let menuOpen = false;
+
     burgerBtn.addEventListener('click', () => {
         menuOpen = !menuOpen;
         if (menuOpen) {
             mainMenu.classList.remove('hidden');
             mainMenu.classList.add('flex', 'flex-col');
+            document.body.style.overflow = 'hidden';
         } else {
             mainMenu.classList.add('hidden');
             mainMenu.classList.remove('flex', 'flex-col');
+            document.body.style.overflow = '';
         }
     });
+
     // Fermer le menu au clic sur un lien (mobile)
-    Array.from(mainMenu.querySelectorAll('a,button')).forEach(el => {
+    Array.from(mainMenu.querySelectorAll('a, button')).forEach(el => {
         el.addEventListener('click', () => {
             if (window.innerWidth < 768) {
                 mainMenu.classList.add('hidden');
                 mainMenu.classList.remove('flex', 'flex-col');
                 menuOpen = false;
+                document.body.style.overflow = '';
             }
         });
     });
@@ -405,6 +498,36 @@
     <style>
       html {
         scroll-behavior: smooth;
+      }
+      /* Améliorations pour mobile */
+      @media (max-width: 768px) {
+        #coach-carousel > div {
+            padding-bottom: 2rem;
+        }
+        #candidats .grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        .hero-section {
+            padding-top: 6rem;
+            padding-bottom: 4rem;
+        }
+        #main-menu {
+            background-color: rgba(0,0,0,0.95);
+            backdrop-filter: blur(10px);
+        }
+      }
+      /* Effet de survol pour les cartes */
+      .artist-card:hover, .candidat-card:hover {
+        transform: translateY(-5px) !important;
+      }
+      /* Animation du bouton play */
+      .play-button {
+        transition: all 0.3s ease;
+      }
+      .relative:hover .play-button {
+        opacity: 1;
+        transform: scale(1.1);
       }
     </style>
 </body>
