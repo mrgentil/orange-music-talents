@@ -5,121 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gally Garvey - Orange Music Talents</title>
     <link href="https://cdn.tailwindcss.com" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="images/favicon.png" type="image/png">
 </head>
-<body class="bg-black text-white min-h-screen pt-16">
-    <!-- Header -->
-    <header class="fixed top-0 w-full bg-black z-50 py-3 px-4 border-b border-gray-800">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="index.html" class="flex items-center">
-                <span class="text-orange-brand font-bold text-xl">Orange</span>
-                <div class="ml-2">
-                    <div class="text-white font-bold text-sm">Music</div>
-                    <div class="text-white font-bold text-sm">Talents</div>
-                </div>
-            </a>
-        </div>
-    </header>
-
-    <!-- Contenu principal -->
-    <div class="container mx-auto px-4 py-8">
-        <!-- Bouton retour -->
-        <a href="index.html#coachs" class="inline-block mb-8 hover:scale-105 transition-transform">
-            <button class="flex items-center gap-2 bg-orange-brand hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow-lg transition-all">
-                <i class="fas fa-arrow-left"></i>
-                <span>Retour aux coachs</span>
+<body class="bg-black min-h-screen text-white">
+    <div class="container mx-auto px-4 py-12 flex flex-col items-center">
+        <a href="index.html#coachs" class="mb-8">
+            <button class="flex items-center gap-2 bg-orange-brand text-white px-6 py-2 rounded-full shadow hover:bg-orange-600 transition">
+                <span class="text-xl">&larr;</span> Retour à la liste des coachs
             </button>
         </a>
-
-        <!-- Carte coach -->
-        <div class="bg-gradient-to-b from-[#181818] to-black rounded-3xl shadow-2xl overflow-hidden coach-card">
-            <!-- Photo -->
-            <div class="relative flex justify-center pt-8">
-                <div class="absolute w-48 h-48 md:w-56 md:h-56 rounded-full bg-orange-brand opacity-20 blur-xl z-0"></div>
-                <img src="images/gally.png" alt="Gally Garvey" 
-                     class="relative z-10 w-48 h-48 md:w-56 md:h-56 object-cover rounded-full border-4 border-orange-brand shadow-lg hover:scale-105 transition duration-300">
+        <div class="w-full max-w-4xl bg-[#181818] rounded-3xl shadow-2xl p-8 md:p-16 flex flex-col md:flex-row items-center gap-12">
+            <!-- Photo avec halo -->
+            <div class="relative flex-shrink-0 flex items-center justify-center">
+                <div class="absolute w-56 h-56 rounded-full bg-orange-brand opacity-30 blur-2xl z-0"></div>
+                <img src="images/gally.png" alt="Gally Garvey" class="relative z-10 w-56 h-56 object-cover rounded-full border-4 border-orange-brand shadow-lg">
             </div>
-
-            <!-- Nom et bio -->
-            <div class="p-6 md:p-8 text-center">
-                <h1 class="bg-orange-brand text-black font-bold text-2xl md:text-3xl px-6 py-2 rounded-full inline-block mb-6 shadow-md">
-                    Gally Garvey
-                </h1>
-                
-                <div class="bg-white bg-opacity-10 rounded-xl p-6 mb-8 text-lg leading-relaxed backdrop-blur-sm coach-bio">
-                    <p class="mb-4">Gally Garvey représente la nouvelle génération de la musique congolaise. Son style unique fusionne rumba traditionnelle, afrobeat et R&B moderne.</p>
-                    
-                    <p class="mb-4">Avec plus de 10 millions de streams sur les plateformes, il a su conquérir le public jeune tout en respectant les racines musicales africaines.</p>
-                    
-                    <div class="mt-6 text-left">
-                        <h3 class="text-orange-brand font-semibold mb-3">Atouts :</h3>
-                        <ul class="space-y-2">
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-orange-brand mt-1 mr-2"></i>
-                                <span>Création de mélodies accrocheuses</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-orange-brand mt-1 mr-2"></i>
-                                <span>Marketing digital pour artistes</span>
-                            </li>
-                            <li class="flex items-start">
-                                <i class="fas fa-check text-orange-brand mt-1 mr-2"></i>
-                                <span>Innovation musicale</span>
-                            </li>
-                        </ul>
-                    </div>
+            <!-- Infos -->
+            <div class="flex-1 flex flex-col items-center md:items-start">
+                <div class="bg-orange-brand rounded-full px-8 py-2 mb-6 shadow text-black text-3xl md:text-4xl font-extrabold text-center md:text-left">Gally Garvey</div>
+                <div class="bg-white bg-opacity-10 rounded-2xl p-6 md:p-8 mb-6 text-lg md:text-xl text-white shadow-inner">
+                    Auteur-compositeur-interprète, Gally Garvey s'impose comme l'une des figures montantes de la musique congolaise contemporaine. Porté par une voix unique et des sonorités modernes mêlant rumba, afrobeat et R&B, il séduit toute une génération. Icône des jeunes et symbole d'une nouvelle vague d'artistes, il inspire par son talent et son authenticité.
                 </div>
-
-                <!-- Boutons -->
-                <div class="flex flex-col sm:flex-row justify-center gap-4">
-                    <a href="index.html#coachs" class="flex-1">
-                        <button class="w-full bg-orange-brand hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full shadow transition-all btn-hover-effect">
-                            Retour aux coachs
-                        </button>
-                    </a>
-                    <a href="index.html" class="flex-1">
-                        <button class="w-full bg-white hover:bg-gray-100 text-orange-brand font-bold py-3 px-6 rounded-full shadow transition-all btn-hover-effect">
-                            Page d'accueil
-                        </button>
-                    </a>
-                </div>
+                <a href="index.html#coachs" class="mt-2 inline-block">
+                    <button class="bg-white text-orange-brand font-bold px-8 py-3 rounded-full shadow hover:bg-orange-100 transition text-lg">Retour à l'accueil</button>
+                </a>
             </div>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="bg-black py-8 mt-12 border-t border-gray-800">
-        <div class="container mx-auto px-4 text-center">
-            <div class="flex justify-center space-x-6 mb-6">
-                <a href="#" class="text-white hover:text-orange-brand text-xl transition">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="text-white hover:text-orange-brand text-xl transition">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="text-white hover:text-orange-brand text-xl transition">
-                    <i class="fab fa-youtube"></i>
-                </a>
-            </div>
-            <p class="text-gray-500 text-sm">
-                © 2023 Orange Music Talents. Tous droits réservés.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Effet de lumière au survol
-        document.querySelectorAll('.coach-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const x = e.clientX - card.getBoundingClientRect().left;
-                const y = e.clientY - card.getBoundingClientRect().top;
-                
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
-            });
-        });
-    </script>
 </body>
-</html>
+</html> 
